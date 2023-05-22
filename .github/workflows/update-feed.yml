@@ -17,6 +17,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2 
+      
+      - name: Remove cached files
+        run: |
+          rm -rf ./arxivfeed
+          rm -f arxivfeed.tgz
+          rm -f asset.url
+          rm -f cache.json
+      
       - name: Download ArxivFeed
         env:
           GITHUB_PAT: ${{ github.token }}
@@ -26,7 +34,6 @@ jobs:
           RENAME: "arxivfeed.tgz"
         shell: bash
         run: |
-          rm -rf ./arxivfeed
           curl -sL --fail \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: Bearer ${GITHUB_PAT}" \
