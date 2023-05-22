@@ -20,6 +20,7 @@ jobs:
       
       - name: Remove cached files
         run: |
+          rm -rf ./target
           rm -rf ./arxivfeed
           rm -f arxivfeed.tgz
           rm -f asset.url
