@@ -1,6 +1,6 @@
 site_title = "MyArxiv"
 limit_days = 7
-cache_url = "https://JIN-strong.github.io/Myarxiv/cache.json"
+cache_url = "https://JIN-strong.github.io/Myarxiv/cache2.json"
 
 [[sources]]
 limit = 150
