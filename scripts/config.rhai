@@ -95,14 +95,7 @@ let opensource_keywords = [
 ];
 
 // 方法1：使用concat()合并
-let allKeywords = llm_architecture_keywords.concat(
-    inference_optimization_keywords,
-    alignment_safety_keywords,
-    multimodal_keywords,
-    application_keywords,
-    benchmark_keywords,
-    opensource_keywords
-);
+let allKeywords = llm_architecture_keywords+inference_optimization_keywords+alignment_safety_keywords+multimodal_keywords+application_keywords+benchmark_keywords+opensource_keywords;
 let titles =  allKeywords+titles_model + titles_method + titles_type;
 let authors_array = ["Guoliang Li"];
 
